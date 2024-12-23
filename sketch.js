@@ -43,7 +43,7 @@ function draw() {
     //   }
     // }
 
-    let selectedKeypoints = [130, 243, 463, 359, 61, 291, 151, 123, 352]; // Replace with the indices you need
+    let selectedKeypoints = [130, 243, 463, 359, 61, 291, 151, 123, 352,199]; // Replace with the indices you need
 
     // Loop through only the selected keypoints
     for (let j of selectedKeypoints) {
@@ -63,7 +63,13 @@ function draw() {
     let keypoint3Index = 359;
     let keypoint4Index = 291; 
     let keypoint5Index = 243;
-    let keypoint6Index = 463; 
+    let keypoint6Index = 463;
+    let keypoint7 = 199;
+    let keypoint8 = 123;
+    let keypoint9 = 151
+    let keypoint10 = 352;
+
+
 
     // Draw boxes around the eyes
     drawFeatureBox(face, leftEye, [0, 0, 255]); // Red box for left eye
@@ -74,7 +80,10 @@ function draw() {
     drawFeatureLines(face, [keypoint1Index, keypoint2Index], [0, 255, 0]); // Green lines for left eye  
     drawFeatureLines(face, [keypoint3Index, keypoint4Index], [0, 255, 0]); // Green lines for left eye 
     drawFeatureLines(face, [keypoint2Index, keypoint5Index], [0, 255, 0]); // Green lines for left eye 
-    drawFeatureLines(face, [keypoint4Index, keypoint6Index], [0, 255, 0]); // Green lines for left eye 
+    drawFeatureLines(face, [keypoint4Index, keypoint6Index], [0, 255, 0]); // Green lines for left eye
+    // drawFeatureLines(face, [keypoint7, keypoint2Index, keypoint8, keypoint1Index, keypoint9, keypoint3Index, keypoint10, keypoint4Index], [0, 255, 255]); // Green lines for left eye
+    
+
 
 
 }
