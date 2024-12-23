@@ -20,7 +20,9 @@ function setup() {
   
 }  
 
-
+function gotFaces(results) { // Callback function for when faceMesh outputs data
+faces = results;  // Save the output to the faces variable
+}
 
 
 function draw() {
