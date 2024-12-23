@@ -62,6 +62,8 @@ function draw() {
     let keypoint2Index = 61; 
     let keypoint3Index = 359;
     let keypoint4Index = 291; 
+    let keypoint5Index = 243;
+    let keypoint6Index = 463; 
 
     // Draw boxes around the eyes
     drawFeatureBox(face, leftEye, [0, 0, 255]); // Red box for left eye
@@ -71,7 +73,10 @@ function draw() {
     // Example: Draw lines connecting  keypoints
     drawFeatureLines(face, [keypoint1Index, keypoint2Index], [0, 255, 0]); // Green lines for left eye  
     drawFeatureLines(face, [keypoint3Index, keypoint4Index], [0, 255, 0]); // Green lines for left eye 
-    
+    drawFeatureLines(face, [keypoint2Index, keypoint5Index], [0, 255, 0]); // Green lines for left eye 
+    drawFeatureLines(face, [keypoint4Index, keypoint6Index], [0, 255, 0]); // Green lines for left eye 
+
+
 }
 
 }
@@ -100,6 +105,4 @@ function drawFeatureLines(face, indices, color) {
     vertex(keypoint.x, keypoint.y);
   }
   endShape(CLOSE);
-}
-
 }
