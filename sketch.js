@@ -1,7 +1,7 @@
 let faceMesh;
 let options = {maxFaces: 1, refineLandmarks: false, flipped: false};
 let video;
-let face = [];
+let faces = [];
 
 function preload() {
   faceMesh= ml5.faceMesh(options);
@@ -30,7 +30,13 @@ function draw() {
 
   image(video, 0, 0, width, height);
 
-  for (let i = 0; i < faces.length; i++) {  // Draw all the tracked face points
+  for (let i = 0; i < faces.length; i++) {
     let face = faces[i];
-
+    for (let j = 0; j < face.keypoints.length; j++) {
+      let keypoint = face.keypoints[j];
+      fill(0, 255, 0);
+      noStroke();
+      circle(keypoint.x, keypoint.y, 5);
+    }
+  }
 }
