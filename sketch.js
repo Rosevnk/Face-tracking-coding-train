@@ -27,4 +27,10 @@ faces = results;  // Save the output to the faces variable
 
 function draw() {
   background(220);
+
+  image(video, 0, 0, width, height);
+
+  for (let i = 0; i < faces.length; i++) {  // Draw all the tracked face points
+    let face = faces[i];
+
 }
